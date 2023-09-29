@@ -21,10 +21,10 @@
     <PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="8.0.0-rc.1.23421.29" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.0-rc.1.23421.29" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.0-rc.1.23421.29" PrivateAssets="all" />
-    <PackageReference Include="ServiceStack.Blazor" Version="6.10.1" />
-    <PackageReference Include="ServiceStack.Client" Version="6.10.1" />
-    <PackageReference Include="ServiceStack.Common" Version="6.10.1" />
-    <PackageReference Include="ServiceStack.Text" Version="6.10.1" />
+    <PackageReference Include="ServiceStack.Blazor" Version="6.*" />
+    <PackageReference Include="ServiceStack.Client" Version="6.*" />
+    <PackageReference Include="ServiceStack.Common" Version="6.*" />
+    <PackageReference Include="ServiceStack.Text" Version="6.*" />
     <PackageReference Include="System.Net.Http.Json" Version="8.0.0-rc.1.23419.4" />
     <PackageReference Include="System.Memory" Version="4.5.5" />
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />

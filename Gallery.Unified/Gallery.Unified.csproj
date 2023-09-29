@@ -15,14 +15,14 @@
   <ItemGroup>
     <PackageReference Include="Bogus" Version="34.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="8.0.0-rc.1.23421.29" />
-    <PackageReference Include="ServiceStack" Version="6.10.1" />
-    <PackageReference Include="ServiceStack.Blazor" Version="6.10.1" />
-    <PackageReference Include="ServiceStack.Client" Version="6.10.1" />
-    <PackageReference Include="ServiceStack.Common" Version="6.10.1" />
-    <PackageReference Include="ServiceStack.OrmLite" Version="6.10.1" />
-    <PackageReference Include="ServiceStack.OrmLite.Sqlite" Version="6.10.1" />
-    <PackageReference Include="ServiceStack.Server" Version="6.10.0" />
-    <PackageReference Include="ServiceStack.Text" Version="6.10.1" />
+    <PackageReference Include="ServiceStack" Version="6.*" />
+    <PackageReference Include="ServiceStack.Blazor" Version="6.*" />
+    <PackageReference Include="ServiceStack.Client" Version="6.*" />
+    <PackageReference Include="ServiceStack.Common" Version="6.*" />
+    <PackageReference Include="ServiceStack.OrmLite" Version="6.*" />
+    <PackageReference Include="ServiceStack.OrmLite.Sqlite" Version="6.*" />
+    <PackageReference Include="ServiceStack.Server" Version="6.*" />
+    <PackageReference Include="ServiceStack.Text" Version="6.*" />
   </ItemGroup>
 
   <ItemGroup>
