@@ -35,6 +35,12 @@ jobs:
         with:
           ref: refs/tags/${{ github.event.inputs.version }}
 
+      - name: setup .net core
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.*'
+          dotnet-quality: 'preview'
+
       # Assign environment variables used in subsequent steps
       - name: Env variable assignment
         run: echo "image_repository_name=$(echo ${{ github.repository }} | tr '[:upper:]' '[:lower:]')" >> $GITHUB_ENV
@@ -101,7 +107,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./BlazorGalleryUnified/bin/Release/net6.0/publish/wwwroot
+          publish_dir: ./BlazorGalleryUnified/bin/Release/net8.0/publish/wwwroot
           user_name: 'GitHub Action'
           user_email: 'action@github.com'
 
