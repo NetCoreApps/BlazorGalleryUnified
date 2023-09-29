@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "Gallery.Unified.Client",
   "resources": {
-    "hash": "sha256-yesb+MZ6xxU95vZ3FZNH4d0UfcRRx7nd3jFQub4kRXM=",
+    "hash": "sha256-TW2dUBhydKyqarAXRRSbOKKXzkKiOq7FVHLI4ZKZSe0=",
     "jsModuleNative": {
       "dotnet.native.8.0.0-rc.1.23419.4.ebljfje3wy.js": "sha256-OB3SMFoT4gk9/wIBQcRjNXymkeCQlE2dnf0hv4iEznw="
     },
@@ -18,9 +18,9 @@
     },
     "assembly": {
       "Blazor.Extensions.Logging.wasm": "sha256-pW1gbK4WZ1QnwJwpYvw5H2VhdjK8o5+ahloOHqC7a0k=",
-      "Gallery.Unified.Client.wasm": "sha256-gwL0fHfh6HEZfXu9xpotOffC9At/VAbTnWCOjV3CneM=",
+      "Gallery.Unified.Client.wasm": "sha256-N685T6YpUGpZOOILD8yNTBV/5F0FmwBJaYon/dKxeD0=",
       "Markdig.wasm": "sha256-c9zlrKfcsjBxSy3hrCop9ob9QSzqEHHAQ1MqvcOq4yg=",
-      "Microsoft.AspNetCore.Authorization.wasm": "sha256-qmKEEwZ1BM0dMLlL3S/aGfCpart1a1coqpUxHhohDv8=",
+      "Microsoft.AspNetCore.Authorization.wasm": "sha256-Eu0R87HXXhwXLaL1/ujI8fZSzsuAMe8EcGcolv7Bd/g=",
       "Microsoft.AspNetCore.Components.Authorization.wasm": "sha256-3CoL7mhCIh5d5lvkCc1EmbxpPcEY5J+qcV3XZnoOZ28=",
       "Microsoft.AspNetCore.Components.Forms.wasm": "sha256-4MIuxVid7do6s+0I8uLcEYTeFeQpK2gRtmRxeawMBxk=",
       "Microsoft.AspNetCore.Components.wasm": "sha256-u0O4yLLm3u25HJeYNPZ3M6rxHx4up3r9ux+wuYnhelw=",
@@ -30,7 +30,7 @@
       "Microsoft.Extensions.Configuration.Abstractions.wasm": "sha256-dmMCYRabfHpXhZCAGRV0a8B506cwbQK3Cmf31GkXpo4=",
       "Microsoft.Extensions.Configuration.Json.wasm": "sha256-2+ATzdyh+QWN8yjxR3Nb3esqnHCJ1ffAnTzgpYyoduQ=",
       "Microsoft.Extensions.Configuration.wasm": "sha256-cBm7cqOYoaSZwIOcULqOQ6G2hRMXVoG8YyI8aDhF38s=",
-      "Microsoft.Extensions.DependencyInjection.Abstractions.wasm": "sha256-Io4A1xSbw00//xKekbT7qQWzol158CFIpUUBMn9PsFs=",
+      "Microsoft.Extensions.DependencyInjection.Abstractions.wasm": "sha256-eSkSOhzuss5f7yTIs4UT/SwRZnLtn7NHk9x6gnpxQ64=",
       "Microsoft.Extensions.DependencyInjection.wasm": "sha256-MFXfGyX6RN5EWUPlS+Z8378NaNXzluMorJHA/UsLq20=",
       "Microsoft.Extensions.Diagnostics.Abstractions.wasm": "sha256-qEI9pCGj02vnJkhs2D2Vaw4Jhv0B0ovQ9ZxzAWSrWKY=",
       "Microsoft.Extensions.Diagnostics.wasm": "sha256-54QXDxGaqsJp92IiflNDftuk95jmlEygfL0KwFlqTXo=",
@@ -118,7 +118,8 @@
   "linkerEnabled": true,
   "appsettings": [
     "../appsettings.Development.json",
-    "../appsettings.json"
+    "../appsettings.json",
+    "../appsettings.Production.json"
   ],
   "globalizationMode": "sharded",
   "extensions": {
