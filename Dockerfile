@@ -1,26 +1,24 @@
-#See https://aka.ms/customizecontainer to learn how to customize your debug container and how Visual Studio uses this Dockerfile to build your images for faster debugging.
-
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
-USER app
-WORKDIR /app
-EXPOSE 8080
-EXPOSE 8081
-
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-ARG BUILD_CONFIGURATION=Release
-WORKDIR /src
-COPY ["NuGet.Config", "NuGet.Config"]
-COPY ["Gallery.Unified/Gallery.Unified.csproj", "Gallery.Unified/"]
-COPY ["Gallery.Unified.Client/Gallery.Unified.Client.csproj", "Gallery.Unified.Client/"]
-RUN dotnet restore "Gallery.Unified/Gallery.Unified.csproj"
-COPY . .
-WORKDIR "/src/Gallery.Unified"
-RUN dotnet build "Gallery.Unified.csproj" -c $BUILD_CONFIGURATION -o /app/build
-
-FROM build AS publish
-RUN dotnet publish "Gallery.Unified.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
-
-FROM base AS final
 WORKDIR /app
-COPY --from=publish /app/publish .
+
+RUN curl -sL https://deb.nodesource.com/setup_16.x | bash - \
+ && apt-get install -y --no-install-recommends nodejs \
+ && echo "node version: $(node --version)" \
+ && echo "npm version: $(npm --version)" \
+ && rm -rf /var/lib/apt/lists/*
+
+COPY ./ .
+RUN dotnet restore
+
+ARG DEPLOY_API
+ARG DEPLOY_CDN
+
+WORKDIR /app/Gallery.Unified.Client
+RUN npm run ui:build
+WORKDIR /app/Gallery.Unified
+RUN dotnet publish -c release /p:DEPLOY_API=${DEPLOY_API} /p:DEPLOY_CDN=${DEPLOY_CDN} /p:APP_TASKS=prerender -o /out --no-restore
+
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
+WORKDIR /app
+COPY --from=build /out .
 ENTRYPOINT ["dotnet", "Gallery.Unified.dll"]
