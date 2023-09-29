@@ -8,10 +8,6 @@ builder.Services.AddLogging(c => c
     .SetMinimumLevel(LogLevel.Trace)
 );
 
-builder.Services.AddOptions();
-builder.Services.AddAuthorizationCore();
-builder.Services.AddSingleton<WeatherForecastService>();
-
 // Use / for local or CDN resources
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 // builder.Services.AddScoped<AuthenticationStateProvider>(s => s.GetRequiredService<ServiceStackStateProvider>());
