@@ -1,6 +1,4 @@
 using System.Net;
-using Microsoft.AspNetCore.Components.Authorization;
-using Microsoft.Net.Http.Headers;
 using MyApp;
 using MyApp.Client;
 using MyApp.Data;
@@ -48,14 +46,14 @@ app.UseStaticFiles();
 
 app.UseServiceStack(new AppHost());
 
-BlazorConfig.Set(new BlazorConfig
-{
-    IsWasm = true,
-    Services = app.Services,
-    FallbackAssetsBasePath = baseUrl,
-    EnableLogging = true,
-    EnableVerboseLogging = app.Environment.IsDevelopment(),
-});
+// BlazorConfig.Set(new BlazorConfig
+// {
+//     IsWasm = true,
+//     Services = app.Services,
+//     FallbackAssetsBasePath = baseUrl,
+//     EnableLogging = true,
+//     EnableVerboseLogging = app.Environment.IsDevelopment(),
+// });
 
 app.MapRazorComponents<App>()
     .AddServerRenderMode()

@@ -29,4 +29,5 @@
     <ProjectReference Include="..\Gallery.Unified.Client\Gallery.Unified.Client.csproj" />
   </ItemGroup>
 
+
 </Project>
