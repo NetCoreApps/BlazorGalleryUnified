@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "Gallery.Unified.Client",
   "resources": {
-    "hash": "sha256-3RzeoeID2k3sOsC9Il5Y20nNi7e5SX+5Lf/GK5/mzHo=",
+    "hash": "sha256-osaBBVcwKpN/00Tf1KWDnphc1la0EqjmEViSjppoIQY=",
     "jsModuleNative": {
       "dotnet.native.8.0.0-rc.1.23419.4.ebljfje3wy.js": "sha256-OB3SMFoT4gk9/wIBQcRjNXymkeCQlE2dnf0hv4iEznw="
     },
@@ -18,7 +18,7 @@
     },
     "assembly": {
       "Blazor.Extensions.Logging.wasm": "sha256-pW1gbK4WZ1QnwJwpYvw5H2VhdjK8o5+ahloOHqC7a0k=",
-      "Gallery.Unified.Client.wasm": "sha256-OLpVrqiOdbckro2cDb2h63DLexL7kJGryNO34W+lH1I=",
+      "Gallery.Unified.Client.wasm": "sha256-oy8s+FjHIwBIP1BcYv7d+OPU/8fOtTAk+Uzwll0JZmQ=",
       "Markdig.wasm": "sha256-c9zlrKfcsjBxSy3hrCop9ob9QSzqEHHAQ1MqvcOq4yg=",
       "Microsoft.AspNetCore.Authorization.wasm": "sha256-Eu0R87HXXhwXLaL1/ujI8fZSzsuAMe8EcGcolv7Bd/g=",
       "Microsoft.AspNetCore.Components.Authorization.wasm": "sha256-3CoL7mhCIh5d5lvkCc1EmbxpPcEY5J+qcV3XZnoOZ28=",
@@ -116,11 +116,6 @@
   "cacheBootResources": true,
   "debugLevel": 0,
   "linkerEnabled": true,
-  "appsettings": [
-    "../appsettings.Development.json",
-    "../appsettings.json",
-    "../appsettings.Production.json"
-  ],
   "globalizationMode": "sharded",
   "extensions": {
     "blazor": {}
