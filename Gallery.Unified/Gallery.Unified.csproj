@@ -40,7 +40,7 @@
   </ItemGroup>
 
   <PropertyGroup>
-    <ClientDir>$(MSBuildProjectDirectory)/../Gallery.United.Client</ClientDir>
+    <ClientDir>$(MSBuildProjectDirectory)/../Gallery.Unified.Client</ClientDir>
     <WwwRoot>$(ClientDir)/wwwroot</WwwRoot>
   </PropertyGroup>
 
