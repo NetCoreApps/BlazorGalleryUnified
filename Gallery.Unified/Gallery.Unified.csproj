@@ -39,6 +39,11 @@
     <_ContentIncludedByDefault Remove="wwwroot\tailwind\ServiceStack.Blazor.html" />
   </ItemGroup>
 
+  <PropertyGroup>
+    <ClientDir>$(MSBuildProjectDirectory)/../Gallery.United.Client</ClientDir>
+    <WwwRoot>$(ClientDir)/wwwroot</WwwRoot>
+  </PropertyGroup>
+
   <!-- Populated in release.yml with GitHub Actions secrets -->
   <Target Name="DeployApi" AfterTargets="Build" Condition="$(DEPLOY_API) != ''">
     <Exec Command="echo DEPLOY_API=$(DEPLOY_API)" />
