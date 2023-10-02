@@ -97,7 +97,7 @@ jobs:
       - name: Publish dotnet project
         working-directory: ./Gallery.Unified
         run: |
-          dotnet publish -c Release /p:DEPLOY_API=${{ secrets.DEPLOY_API }} /p:DEPLOY_CDN=${{ secrets.DEPLOY_CDN }} /p:APP_TASKS=prerender
+          dotnet publish -c Release /p:DEPLOY_API=${{ secrets.DEPLOY_API }} /p:DEPLOY_CDN=${{ secrets.DEPLOY_CDN }}
 
       # Deploy UI to GitHub Pages
       - name: Deploy to GitHub Pages

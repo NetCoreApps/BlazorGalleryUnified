@@ -29,6 +29,16 @@
     <ProjectReference Include="..\Gallery.Unified.Client\Gallery.Unified.Client.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\css\app.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\css\markdown.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\css\typography.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\js\highlight.cshtml-razor.min.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\js\highlight.min.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\js\servicestack-blazor.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\tailwind\ServiceStack.Blazor.html" />
+  </ItemGroup>
+
   <!-- Populated in release.yml with GitHub Actions secrets -->
   <Target Name="DeployApi" AfterTargets="Build" Condition="$(DEPLOY_API) != ''">
     <Exec Command="echo DEPLOY_API=$(DEPLOY_API)" />
