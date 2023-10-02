@@ -40,8 +40,7 @@
   </ItemGroup>
 
   <PropertyGroup>
-    <ClientDir>$(MSBuildProjectDirectory)/../Gallery.Unified.Client</ClientDir>
-    <WwwRoot>$(ClientDir)/wwwroot</WwwRoot>
+    <WwwRoot>$(MSBuildProjectDirectory)/wwwroot</WwwRoot>
   </PropertyGroup>
 
   <!-- Populated in release.yml with GitHub Actions secrets -->
