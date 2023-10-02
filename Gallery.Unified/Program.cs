@@ -44,19 +44,27 @@ else
     app.UseHsts();
 }
 
-//app.UseBlazorFrameworkFiles();
-
 app.UseHttpsRedirection();
 
 app.UseStaticFiles();
 
-app.UseRouting();
+// app.UseRouting();
 
 app.UseServiceStack(new AppHost());
 
-app.MapRazorPages();
-app.MapControllers();
-app.MapFallbackToFile("index.html");
+// app.UseEndpoints(endpoints =>
+// {
+//     endpoints.MapRazorPages();
+//     endpoints.MapControllers();
+//     endpoints.MapFallbackToFile("index.html");
+// });
+
+// app.MapRazorPages();
+// app.MapControllers();
+// app.MapFallbackToFile("index.html");
+
+// app.UseBlazorFrameworkFiles();
+
 
 BlazorConfig.Set(new BlazorConfig
 {
