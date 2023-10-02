@@ -52,6 +52,10 @@ app.UseRouting();
 
 app.UseServiceStack(new AppHost());
 
+app.MapRazorPages();
+app.MapControllers();
+app.MapFallbackToFile("index.html");
+
 app.MapRazorComponents<App>()
     .AddServerRenderMode()
     .AddWebAssemblyRenderMode();
