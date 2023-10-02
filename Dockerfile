@@ -19,9 +19,11 @@ RUN dotnet restore
 ARG DEPLOY_API
 ARG DEPLOY_CDN
 
-WORKDIR /app/Gallery.Unified
+WORKDIR /app/Gallery.Unified.Client
 RUN npm run ui:build
-RUN dotnet publish -c release /p:DEPLOY_API=${DEPLOY_API} /p:DEPLOY_CDN=${DEPLOY_CDN} /p:APP_TASKS=prerender -o /out --no-restore
+
+WORKDIR /app/Gallery.Unified
+RUN dotnet publish -c release -o /out --no-restore
 
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
 WORKDIR /app
