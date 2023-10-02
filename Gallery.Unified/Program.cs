@@ -42,17 +42,9 @@ else
 }
 
 app.UseStaticFiles();
+app.UseBlazorFrameworkFiles();
 
 app.UseServiceStack(new AppHost());
-
-// BlazorConfig.Set(new BlazorConfig
-// {
-//     IsWasm = true,
-//     Services = app.Services,
-//     FallbackAssetsBasePath = baseUrl,
-//     EnableLogging = true,
-//     EnableVerboseLogging = app.Environment.IsDevelopment(),
-// });
 
 app.MapRazorComponents<App>()
     .AddServerRenderMode()
