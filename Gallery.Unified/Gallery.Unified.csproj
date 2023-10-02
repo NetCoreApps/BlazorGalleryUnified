@@ -41,7 +41,7 @@
 
   <PropertyGroup>
     <WwwRoot>$(MSBuildProjectDirectory)/wwwroot</WwwRoot>
-    <WwwRootPublish>$(MSBuildProjectDirectory)/$(PublishUrl)</WwwRootPublish>
+    <WwwRootPublish>$(MSBuildProjectDirectory)/$(PublishUrl)wwwroot</WwwRootPublish>
   </PropertyGroup>
 
   <!-- Populated in release.yml with GitHub Actions secrets -->
@@ -60,10 +60,11 @@
     <!-- Define custom domain name that CDN should use -->
     <Exec Condition="$(DEPLOY_CDN) != ''" Command="echo $(DEPLOY_CDN) &gt; $(WwwRoot)/CNAME" />
   </Target>
-  
-  <Target Name="IndexFallback" AfterTargets="Publish" Condition="$(DEPLOY_CDN) != ''">
-    <!-- 404.html SPA fallback (supported by GitHub Pages, Cloudflare & Netlify CDNs) -->
-    <Copy SourceFiles="$(WwwRootPublish)/index.html" DestinationFiles="$(WwwRootPublish)/404.html" />
-  </Target>
-  
+<!--  -->
+<!--  <Target Name="IndexFallback" AfterTargets="AfterPublish" Condition="$(DEPLOY_CDN) != ''">-->
+<!--    <Exec Command="ls -la $(WwwRootPublish)" />-->
+<!--    &lt;!&ndash; 404.html SPA fallback (supported by GitHub Pages, Cloudflare & Netlify CDNs) &ndash;&gt;-->
+<!--    <Copy SourceFiles="$(WwwRootPublish)/index.html" DestinationFiles="$(WwwRootPublish)/404.html" />-->
+<!--  </Target>-->
+<!--  -->
 </Project>
