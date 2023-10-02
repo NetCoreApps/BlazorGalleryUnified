@@ -44,6 +44,8 @@ else
     app.UseHsts();
 }
 
+app.UseBlazorFrameworkFiles();
+
 app.UseHttpsRedirection();
 
 app.UseStaticFiles();
