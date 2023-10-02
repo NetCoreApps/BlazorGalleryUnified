@@ -1,4 +1,5 @@
 using System.Net;
+using Microsoft.AspNetCore.Mvc;
 using MyApp;
 using MyApp.Client;
 using MyApp.Data;
@@ -11,7 +12,10 @@ builder.Services.AddRazorComponents()
     .AddWebAssemblyComponents();
 
 builder.Services.AddControllersWithViews();
-builder.Services.AddRazorPages();
+builder.Services.AddRazorPages(o =>
+{
+    o.Conventions.ConfigureFilter(new IgnoreAntiforgeryTokenAttribute());
+});
 // builder.Services.AddScoped<BlazorWasmAuthContext>();
 // builder.Services.AddScoped<BlazorServerAuthContext>();
 // builder.Services.AddScoped<ServiceStackStateProvider>();
