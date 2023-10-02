@@ -44,7 +44,7 @@ else
     app.UseHsts();
 }
 
-app.UseBlazorFrameworkFiles();
+//app.UseBlazorFrameworkFiles();
 
 app.UseHttpsRedirection();
 
@@ -57,6 +57,15 @@ app.UseServiceStack(new AppHost());
 app.MapRazorPages();
 app.MapControllers();
 app.MapFallbackToFile("index.html");
+
+BlazorConfig.Set(new BlazorConfig
+{
+    IsWasm = true,
+    Services = app.Services,
+    FallbackAssetsBasePath = baseUrl,
+    EnableLogging = true,
+    EnableVerboseLogging = app.Environment.IsDevelopment(),
+});
 
 app.MapRazorComponents<App>()
     .AddServerRenderMode()
