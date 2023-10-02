@@ -42,9 +42,17 @@ else
 }
 
 app.UseStaticFiles();
-app.UseBlazorFrameworkFiles();
+
+app.UseRouting();
 
 app.UseServiceStack(new AppHost());
+
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapRazorPages();
+    endpoints.MapControllers();
+    endpoints.MapFallbackToFile("index.html");
+});
 
 app.MapRazorComponents<App>()
     .AddServerRenderMode()
