@@ -31,7 +31,8 @@ public class AppHost : AppHostBase, IHostingStartup
             "https://docs.servicestack.net",
             "https://jamstacks.net",
             "https://razor-ssg.web-templates.io",
-            "https://razor-press.web-templates.io"
+            "https://razor-press.web-templates.io",
+            "https://gallery-unified.netcore.io"
         }, allowCredentials: true));
 
 
