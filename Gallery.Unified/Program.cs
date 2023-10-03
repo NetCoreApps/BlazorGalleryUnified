@@ -2,7 +2,6 @@ using System.Net;
 using Microsoft.AspNetCore.Mvc;
 using MyApp;
 using MyApp.Client;
-using MyApp.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -28,7 +27,6 @@ var baseUrl = builder.Configuration["ApiBaseUrl"] ??
 
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(baseUrl) });
 builder.Services.AddBlazorServerApiClient(baseUrl);
-builder.Services.AddSingleton<WeatherForecastService>();
 builder.Services.AddLocalStorage();
 var app = builder.Build();
 
