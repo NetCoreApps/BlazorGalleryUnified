@@ -29,5 +29,11 @@
     <PackageReference Include="System.Memory" Version="4.5.5" />
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
   </ItemGroup>
+  
+  <ItemGroup>
+    <Content Update="wwwroot\data\weather.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
 
 </Project>
